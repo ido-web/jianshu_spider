@@ -1,5 +1,5 @@
 # 某书整站爬虫
-Scrapy框架 + 随机设置请求头 + 设置代理IP + twisted提供的数据库连接池保存到mysql 爬取简书整站
+Scrapy + selenium/webdriver + 随机请求头 + IP proxy + twisted ConnectionPool + mysql 爬取某书整站爬虫 
 
 ### 环境安装
 ```vim
@@ -20,6 +20,30 @@ pip install requirements
     # 数据库名称
     DATABASE_NAME = 'jianshu'
 ```
+### selenium + webdriver添加中间件 爬取网页
+因为动态网站，数据通过js动态加载，或者有强大反爬虫技术
+所以这里使用selenium + chromedriver（chrome浏览器） 完全模拟浏览器操作来爬取。
+
+**tips : selenium + phantomjs也很好用**
+```python
+  class ChromeDriverDownloaderMiddleware(object):
+      '''
+      使用selenium + chromedriver爬取网页
+      '''
+      def __init__(self):
+          driver_path = r'D:\python\chromedriver\chromedriver.exe'
+          self.driver = webdriver.Chrome(executable_path=driver_path)
+      #
+      def process_request(self,request,spider):
+          self.driver.get(request.url)
+          source = self.driver.page_source
+          response = HtmlResponse(self.driver.current_url,body=source,request=request)
+          return response
+      def process_response(self,request,response,spider):
+          pass
+```
+
+
 ### 随机请求头设置
  http://www.useragentstring.com
  到这个网址，可以找到全部User-Agent

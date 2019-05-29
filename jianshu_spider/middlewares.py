@@ -16,7 +16,7 @@ from .model import IPProxyModel
 
 class ChromeDriverDownloaderMiddleware(object):
     '''
-    使用selenium + chromediuver爬取网页
+    使用selenium + chromedriver爬取网页
     '''
     def __init__(self):
         driver_path = r'D:\python\chromedriver\chromedriver.exe'
