@@ -1,10 +1,15 @@
 from datetime import datetime,timedelta
 
 class IPProxyModel():
-
+    '''
+    代理ip模型类
+    '''
     def __init__(self,data):
+        # IP
         self.ip = data['ip']
+        # 端口号
         self.port = data['port']
+        # 过期时间
         self.expire_time_str = data['expire_time']
         # 是否被加入了黑名单
         self.blacked = False

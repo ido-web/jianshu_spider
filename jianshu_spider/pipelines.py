@@ -9,6 +9,7 @@ from twisted.enterprise import adbapi
 from pymysql import cursors
 from . import settings
 
+
 class JianshuSpiderPipeline():
     def __init__(self):
         db_params = {
@@ -51,16 +52,19 @@ class JianshuSpiderPipeline():
             '''
         return self._sql
 
+
 class JianshuTwistedPipeline():
     ''''
     '''
+
     def __init__(self):
         db_params = {
-            'host': '127.0.0.1',
+            'host': settings.HOST,
+            # 'port':'3306'
             'port': 3306,
-            'user': 'root',
-            'password': 'password',
-            'database': 'jiashu',
+            'user': settings.USER,
+            'password': settings.PASSWORD,
+            'database': settings.DATABASE_NAME,
             'charset': 'utf8',
             'cursorclass': cursors.DictCursor
         }
@@ -68,23 +72,27 @@ class JianshuTwistedPipeline():
         # 使用twisted提供的 ConnectionPool
         self.dbpool = adbapi.ConnectionPool('pymysql', **db_params)
         self._sql = None
+
     #
     @property
     def sql(self):
+        '''
+         创建sql语句
+         :return: 插入数据的sql语句
+         '''
         if not self._sql:
             self._sql = "insert into article(id,title,avatar,author,pub_time,origin_url,article_id,content) values (null,%s,%s,%s,%s,%s,%s,%s)"
         return self._sql
 
     def process_item(self, item, spider):
         defer = self.dbpool.runInteraction(self.insert_item, item)
-        defer.addErrback(self.handle_error,item,spider)
-
+        defer.addErrback(self.handle_error, item, spider)
 
     def insert_item(self, cursors, item):
-        cursors.execute(self.sql,(item['title'], item['avatar'], item['author'], item['pub_time'],
-                                  item['origin_url'], item['article_id'], item['content']))
+        cursors.execute(self.sql, (item['title'], item['avatar'], item['author'], item['pub_time'],
+                                   item['origin_url'], item['article_id'], item['content']))
 
-    def handle_error(self,error,item,spider):
+    def handle_error(self, error, item, spider):
         '''
         处理错误
         :param error:
@@ -92,8 +100,6 @@ class JianshuTwistedPipeline():
         :param spider:
         :return:
         '''
-        print("*"*10 + 'error' + '*'*10)
+        print("*" * 10 + 'error' + '*' * 10)
         print(error)
-        print("*"*10 + 'error' + '*'*10)
-
-
+        print("*" * 10 + 'error' + '*' * 10)

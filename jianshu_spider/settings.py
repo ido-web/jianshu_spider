@@ -97,8 +97,12 @@ ITEM_PIPELINES = {
 
 
 # database config
+# 数据库主机IP
 HOST = '127.0.0.1'
+# 数据库用户名
 USER = "root"
+# 数据库密码
 PASSWORD = "password"
+# 数据库名称
 DATABASE_NAME = 'jianshu'
 
