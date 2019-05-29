@@ -146,7 +146,7 @@ pip install requirements
   ```
   
   ### 保存数据到数据库
-  本项目使用 twisted提供的数据库连接池插入数据到数据库连接池
+  本项目使用 twisted提供的数据库连接池插入数据到数据库
   使用方式：
   
   导入
@@ -180,3 +180,12 @@ pip install requirements
     defer = self.dbpool.runInteraction(self.insert_item, item)
   ```
   
+  ### 启动爬虫
+  运行 start.py即可启动
+  
+   ```pyhton
+      from scrapy import cmdline
+      
+      # 在命令行执行 scrapy crawl jianshu 命令
+      cmdline.execute('scrapy crawl jianshu'.split())
+   ```

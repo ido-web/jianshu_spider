@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3e1363d-ddaa-4ce3-bafe-f3b8579b853a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jianshu_spider/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/jianshu_spider/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jianshu_spider/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/jianshu_spider/pipelines.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jianshu_spider/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/jianshu_spider/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,8 +19,8 @@
               <entry file="file://$PROJECT_DIR$/README.md">
                 <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
                   <state split_layout="SPLIT">
-                    <first_editor relative-caret-position="317">
-                      <caret line="171" column="9" lean-forward="true" selection-start-line="171" selection-start-column="9" selection-end-line="171" selection-end-column="9" />
+                    <first_editor relative-caret-position="425">
+                      <caret line="155" column="32" lean-forward="true" selection-start-line="155" selection-start-column="32" selection-end-line="155" selection-end-column="32" />
                     </first_editor>
                     <second_editor />
                   </state>
@@ -39,7 +34,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jianshu_spider/pipelines.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="486">
@@ -112,11 +107,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/start.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+            <state>
+              <caret selection-end-line="2" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -376,12 +371,12 @@
       <workItem from="1557990793862" duration="2582000" />
       <workItem from="1558690522926" duration="43000" />
       <workItem from="1559039180029" duration="2308000" />
-      <workItem from="1559092643673" duration="1923000" />
+      <workItem from="1559092643673" duration="2520000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46506000" />
+    <option name="totallyTimeSpent" value="47103000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="88" width="1936" height="1066" extended-state="6" />
@@ -485,13 +480,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/start.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jianshu_spider/middlewares.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1122">
@@ -526,11 +514,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/start.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="2" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="317">
-            <caret line="171" column="9" lean-forward="true" selection-start-line="171" selection-start-column="9" selection-end-line="171" selection-end-column="9" />
+          <first_editor relative-caret-position="425">
+            <caret line="155" column="32" lean-forward="true" selection-start-line="155" selection-start-column="32" selection-end-line="155" selection-end-column="32" />
           </first_editor>
           <second_editor />
         </state>
