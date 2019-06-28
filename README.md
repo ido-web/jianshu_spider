@@ -205,7 +205,7 @@ pip install requirements
   ```
   
   ### 启动爬虫
-  运行 start.py即可启动
+  运行 start.py即可启动爬虫
   
    ```pyhton
       from scrapy import cmdline
