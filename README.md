@@ -1,7 +1,7 @@
 # 某书整站爬虫
 Scrapy + selenium/webdriver + 随机请求头 + IP proxy + twisted ConnectionPool + mysql 爬取某书整站爬虫 
 
-### 环境安装
+### 环境安装  
 ```vim
 pip install requirements
 ```
