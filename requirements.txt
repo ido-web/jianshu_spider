@@ -13,7 +13,7 @@ idna==2.8
 incremental==17.5.0
 lxml==4.3.3
 parsel==1.5.1
-Pillow==6.0.0
+Pillow==6.2.0
 post==2019.4.13
 public==2019.4.13
 pyasn1==0.4.5
